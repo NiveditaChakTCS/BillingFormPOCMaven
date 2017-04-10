@@ -17,8 +17,8 @@ public class BaseController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
 
-		model.addAttribute("message", "Welcome");
-		model.addAttribute("counter", ++counter);
+		model.addAttribute("message", "Hello GIT");
+		model.addAttribute("counter1235", ++counter);
 		logger.debug("[welcome] counter : {}", counter);
 
 		// Spring uses InternalResourceViewResolver and return back index.jsp
@@ -29,8 +29,8 @@ public class BaseController {
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String name, ModelMap model) {
 
-		model.addAttribute("message", "Hello Git " + name);
-		model.addAttribute("counter", ++counter);
+		model.addAttribute("message", "Hello GIT" + name);
+		model.addAttribute("counter1235", ++counter);
 		logger.debug("[welcomeName] counter : {}", counter);
 		return VIEW_INDEX;
 
